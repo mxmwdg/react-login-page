@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme{
+    --color-darkviolet: #1c171f;
+    --color-darkorange: #4d4b4a;
+    --color-darkorangeplus: #555555;
+    --color-darkgrey: #867b71;
+    --color-lightgrey: #7d7785;
+    --color-lightviolet: #4e2d62;
+}
+@layer base{
+    html{
+        @apply h-full
+    }
+    body{
+        @apply  flex min-h-full flex-col bg-lightviolet dark:bg-darkviolet;
+    }
+    
+}
+@layer components{
+    .loginInput{
+        @apply bg-lightgrey  dark:bg-darkorange rounded-2xl lg:w-120 md:w-100 sm:w-80 p-2.5 m-8 mt-6 border-2 border-darkorangeplus focus:border-neutral-800 transition-colors duration-300 italic
+        outline-0;
+        
+    }
+    .loginText{
+        @apply mx-10 text-neutral-700
+          text-lg font-semibold
+    }
+    .loginButton{
+        @apply  text-darkgrey bg-neutral-300 dark:bg-[#1a1a1a] rounded-3xl lg:w-70 md:w-50 sm:w-30 mx-32 mt-4 p-2 border-3 border-[#17161b] cursor-pointer hover:border-neutral-950 hover:bg-blend-color transition-colors duration-300 outline-0
+    }
+}
+@utility flex-center{
+    @apply justify-center items-center
+}
