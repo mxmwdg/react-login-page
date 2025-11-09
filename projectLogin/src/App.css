@@ -19,16 +19,22 @@
 }
 @layer components{
     .loginInput{
-        @apply bg-lightgrey  dark:bg-darkorange rounded-2xl lg:w-120 md:w-100 sm:w-80 p-2.5 m-8 mt-6 border-2 border-darkorangeplus focus:border-neutral-800 transition-colors duration-300 italic
+        @apply bg-lightgrey  dark:bg-darkorange rounded-2xl lg:w-120 md:w-100 sm:w-80  p-2.5 m-8 mt-6 border-2 border-darkorangeplus focus:border-neutral-800 transition-colors duration-300 italic
         outline-0;
         
     }
     .loginText{
-        @apply mx-10 text-neutral-700
+        @apply mx-10 text-neutral-800
           text-lg font-semibold
     }
     .loginButton{
-        @apply  text-darkgrey bg-neutral-300 dark:bg-[#1a1a1a] rounded-3xl lg:w-70 md:w-50 sm:w-30 mx-32 mt-4 p-2 border-3 border-[#17161b] cursor-pointer hover:border-neutral-950 hover:bg-blend-color transition-colors duration-300 outline-0
+        @apply  text-darkgrey bg-neutral-300 dark:bg-[#1a1a1a] rounded-3xl lg:w-70 md:w-50 sm:w-30 mx-32  p-2 border-3 border-[#17161b] cursor-pointer hover:border-neutral-950 hover:bg-blend-color transition-colors duration-300 outline-0
+    }
+    .loginOtherOptions{
+        @apply font-semibold text-neutral-800 underline flex-center text-[min(2vw,16px)] text-balance
+    }
+    .backgroundImage{
+        @apply  absolute h-1/2 w-1/4  opacity-25 max-sm:scale-65 max-md:scale-75 
     }
 }
 @utility flex-center{

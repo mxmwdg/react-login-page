@@ -9,8 +9,8 @@ function App() {
 
   return (
     <div className='relative grow'>
-      <img src={image} className=' absolute h-1/2 w-1/4 left-30 bottom-0 '></img>
-      <img src={image2} className=' absolute h-1/2 w-1/4 right-30 top-0 '></img>
+      <img src={image} className='backgroundImage left-30 bottom-0'></img>
+      <img src={image2} className='backgroundImage right-30 top-0'></img>
       <LoginPage></LoginPage>
     </div>
   )
