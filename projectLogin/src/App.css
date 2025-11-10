@@ -3,10 +3,12 @@
 @theme{
     --color-darkviolet: #1c171f;
     --color-darkorange: #4d4b4a;
+    --color-darkerorange: #1a1a1a;
     --color-darkorangeplus: #555555;
     --color-darkgrey: #867b71;
     --color-lightgrey: #7d7785;
     --color-lightviolet: #4e2d62;
+    --color-errorred: #500724;
 }
 @layer base{
     html{
@@ -19,7 +21,12 @@
 }
 @layer components{
     .loginInput{
-        @apply bg-lightgrey  dark:bg-darkorange shadow-sm rounded-2xl lg:w-120 md:w-100 sm:w-80  p-2.5 m-8 mt-6 border-2 border-darkorangeplus focus:border-neutral-800 transition-colors duration-300 italic
+        @apply bg-lightgrey  dark:bg-darkorange shadow-sm rounded-2xl lg:w-120 md:w-100 sm:w-80  p-2.5 m-8 mt-6 border-2 border-darkorangeplus focus:border-neutral-800 transition-colors duration-350 italic
+        outline-0;
+        
+    }
+    .loginInputError{
+        @apply bg-lightgrey  dark:bg-darkorange shadow-sm rounded-2xl lg:w-120 md:w-100 sm:w-80  p-2.5 m-8 mt-6 border-2 border-errorred focus:border-errorred transition-colors duration-100 italic
         outline-0;
         
     }
@@ -28,7 +35,7 @@
           text-lg font-semibold
     }
     .loginButton{
-        @apply  text-darkgrey bg-neutral-300 dark:bg-[#1a1a1a] rounded-3xl lg:w-70 md:w-50 sm:w-30 mx-32  p-2 border-3 border-[#17161b] shadow-md cursor-pointer hover:border-neutral-950 hover:bg-blend-color transition-colors duration-300 outline-0
+        @apply  text-darkgrey bg-neutral-300 dark:bg-darkerorange rounded-3xl lg:w-70 md:w-50 sm:w-30 mx-32  p-2 border-2 border-[#17161b] shadow-md cursor-pointer hover:border-neutral-950 hover:bg-blend-color transition-colors duration-300 outline-0
     }
     .loginOtherOptions{
         @apply font-semibold text-neutral-800 underline flex-center text-[min(2vw,16px)] text-balance
